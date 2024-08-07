@@ -3,6 +3,7 @@ function calculateLove(){
     const name2 = document.getElementById('name2').value.trim();
     if(name1 === '' || name2 === ''){
         alert('Entrer les noms.')
+        result.innerHTML = ''
     }
 
     const loverPercentage = Math.floor(Math.random() * 101)
@@ -17,4 +18,6 @@ function calculateLove(){
     }else{
         result.innerHTML += "<br> Super match ! L'amour est dans l'air!";
 }
+    document.getElementById('name1').value = '';
+    document.getElementById('name2').value = '';
 }
